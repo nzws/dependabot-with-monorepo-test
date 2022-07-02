@@ -7,7 +7,6 @@
   "packageRules": [
     {
       "ignorePaths": ["packages/**"],
-      "baseBranches": ["master"],
       "matchBaseBranches": ["master"],
       "matchFiles": ["package.json"],
       "branchPrefix": "renovate/master/"
