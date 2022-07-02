@@ -4,16 +4,23 @@
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
   "branchConcurrentLimit": 0,
+  "baseBranches": ["master", "develop/a", "develop/b"],
   "packageRules": [
     {
+      "matchBaseBranches": ["master"],
+      "matchFiles": ["package.json"],
+      "branchPrefix": "renovate/master/",
+      "ignorePaths": ["packages/**"]
+    },
+    {
       "matchBaseBranches": ["develop/a"],
-      "matchFiles": ["packages/frontend-a/package.json"],
-      "branchPrefix": "renovate/frontend-a/"
+      "branchPrefix": "renovate/frontend-a/",
+      "ignorePaths": ["packages/frontend-b/**"]
     },
     {
       "matchBaseBranches": ["develop/b"],
-      "matchFiles": ["packages/frontend-b/package.json"],
-      "branchPrefix": "renovate/frontend-b/"
+      "branchPrefix": "renovate/frontend-b/",
+      "ignorePaths": ["packages/frontend-a/**"]
     }
   ]
 }
