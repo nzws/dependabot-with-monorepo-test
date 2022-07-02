@@ -8,18 +8,20 @@
   "packageRules": [
     {
       "matchBaseBranches": ["master"],
-      "branchPrefix": "renovate/master/",
-      "matchFiles": ["packages/**"],
+      "matchFiles": [
+        "packages/frontend-a/package.json",
+        "packages/frontend-b/package.json"
+      ],
       "enabled": false
     },
     {
       "matchBaseBranches": ["develop/a"],
-      "matchFiles": ["packages/frontend-b/**"],
+      "matchFiles": ["packages/frontend-b/package.json"],
       "enabled": false
     },
     {
       "matchBaseBranches": ["develop/b"],
-      "matchFiles": ["packages/frontend-a/**"],
+      "matchFiles": ["packages/frontend-a/package.json"],
       "enabled": false
     },
     {
