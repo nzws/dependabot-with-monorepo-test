@@ -8,31 +8,27 @@
   "packageRules": [
     {
       "enabled": false,
+      "matchBaseBranches": ["master"]
+    },
+    {
+      "enabled": false,
+      "matchBaseBranches": ["develop/a"]
+    },
+    {
+      "enabled": false,
+      "matchBaseBranches": ["develop/b"]
+    },
+    {
+      "enabled": true,
       "matchBaseBranches": ["master"],
-      "matchFiles": [
-        "packages/frontend-a/package.json",
-        "packages/frontend-b/package.json"
-      ]
+      "branchPrefix": "renovate/master/",
+      "matchFiles": ["package.json"]
     },
     {
-      "enabled": false,
+      "enabled": true,
       "matchBaseBranches": ["develop/a"],
-      "matchFiles": ["packages/frontend-b/package.json"]
-    },
-    {
-      "enabled": false,
-      "matchBaseBranches": ["develop/b"],
+      "branchPrefix": "renovate/frontend-a/",
       "matchFiles": ["packages/frontend-a/package.json"]
-    },
-    {
-      "enabled": true,
-      "matchBaseBranches": ["master"],
-      "branchPrefix": "renovate/master/"
-    },
-    {
-      "enabled": true,
-      "matchBaseBranches": ["develop/a"],
-      "branchPrefix": "renovate/frontend-a/"
     },
     {
       "enabled": true,
