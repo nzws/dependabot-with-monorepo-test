@@ -8,17 +8,20 @@
     {
       "ignorePaths": ["packages/**"],
       "baseBranches": ["master"],
-      "matchPaths": ["package.json"],
+      "matchBaseBranches": ["master"],
+      "matchFiles": ["package.json"],
       "branchPrefix": "renovate/master/"
     },
     {
       "baseBranches": ["develop/a"],
-      "matchPaths": ["packages/frontend-a/package.json"],
+      "matchBaseBranches": ["develop/a"],
+      "matchFiles": ["packages/frontend-a/package.json"],
       "branchPrefix": "renovate/frontend-a/"
     },
     {
       "baseBranches": ["develop/b"],
-      "matchPaths": ["packages/frontend-b/package.json"],
+      "matchBaseBranches": ["develop/b"],
+      "matchFiles": ["packages/frontend-b/package.json"],
       "branchPrefix": "renovate/frontend-b/"
     }
   ]
