@@ -7,32 +7,34 @@
   "baseBranches": ["master", "develop/a", "develop/b"],
   "packageRules": [
     {
+      "enabled": false,
+      "matchBaseBranches": ["master"]
+    },
+    {
+      "enabled": false,
+      "matchBaseBranches": ["develop/a"]
+    },
+    {
+      "enabled": false,
+      "matchBaseBranches": ["develop/b"]
+    },
+    {
+      "enabled": true,
       "matchBaseBranches": ["master"],
       "branchPrefix": "renovate/master/",
-      "matchFiles": ["packages/**"],
-      "enabled": false
+      "matchFiles": ["package.json"]
     },
     {
+      "enabled": true,
       "matchBaseBranches": ["develop/a"],
-      "matchFiles": ["packages/frontend-b/**"],
-      "enabled": false
+      "branchPrefix": "renovate/frontend-a/",
+      "matchFiles": ["packages/frontend-a/package.json"]
     },
     {
+      "enabled": true,
       "matchBaseBranches": ["develop/b"],
-      "matchFiles": ["packages/frontend-a/**"],
-      "enabled": false
-    },
-    {
-      "matchBaseBranches": ["master"],
-      "branchPrefix": "renovate/master/"
-    },
-    {
-      "matchBaseBranches": ["develop/a"],
-      "branchPrefix": "renovate/frontend-a/"
-    },
-    {
-      "matchBaseBranches": ["develop/b"],
-      "branchPrefix": "renovate/frontend-b/"
+      "branchPrefix": "renovate/frontend-b/",
+      "matchFiles": ["packages/frontend-b/package.json"]
     }
   ]
 }
