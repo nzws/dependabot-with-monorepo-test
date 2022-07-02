@@ -7,17 +7,17 @@
   "packageRules": [
     {
       "matchPackagePatterns": ["*"],
-      "baseBranches": ["master"],
+      "matchBaseBranches": ["master"],
       "matchFiles": ["package.json"]
     },
     {
       "matchPackagePatterns": ["*"],
-      "baseBranches": ["develop/a"],
+      "matchBaseBranches": ["develop/a"],
       "matchFiles": ["packages/frontend-a/package.json"]
     },
     {
       "matchPackagePatterns": ["*"],
-      "baseBranches": ["develop/b"],
+      "matchBaseBranches": ["develop/b"],
       "matchFiles": ["packages/frontend-b/package.json"]
     }
   ]
