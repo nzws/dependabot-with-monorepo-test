@@ -7,34 +7,38 @@
   "baseBranches": ["master", "develop/a", "develop/b"],
   "packageRules": [
     {
+      "enabled": false,
       "matchBaseBranches": ["master"],
       "matchFiles": [
         "packages/frontend-a/package.json",
         "packages/frontend-b/package.json"
-      ],
-      "enabled": false
+      ]
     },
     {
+      "enabled": false,
       "matchBaseBranches": ["develop/a"],
-      "matchFiles": ["packages/frontend-b/package.json"],
-      "enabled": false
+      "matchFiles": ["packages/frontend-b/package.json"]
     },
     {
+      "enabled": false,
       "matchBaseBranches": ["develop/b"],
-      "matchFiles": ["packages/frontend-a/package.json"],
-      "enabled": false
+      "matchFiles": ["packages/frontend-a/package.json"]
     },
     {
+      "enabled": true,
       "matchBaseBranches": ["master"],
       "branchPrefix": "renovate/master/"
     },
     {
+      "enabled": true,
       "matchBaseBranches": ["develop/a"],
       "branchPrefix": "renovate/frontend-a/"
     },
     {
+      "enabled": true,
       "matchBaseBranches": ["develop/b"],
-      "branchPrefix": "renovate/frontend-b/"
+      "branchPrefix": "renovate/frontend-b/",
+      "matchFiles": ["packages/frontend-b/package.json"]
     }
   ]
 }
