@@ -7,17 +7,17 @@
   "packageRules": [
     {
       "ignorePaths": ["packages/**"],
-      "matchBaseBranches": ["master"],
+      "baseBranches": ["master"],
       "matchPaths": ["package.json"],
       "branchPrefix": "renovate/master/"
     },
     {
-      "matchBaseBranches": ["develop/a"],
+      "baseBranches": ["develop/a"],
       "matchPaths": ["packages/frontend-a/package.json"],
       "branchPrefix": "renovate/frontend-a/"
     },
     {
-      "matchBaseBranches": ["develop/b"],
+      "baseBranches": ["develop/b"],
       "matchPaths": ["packages/frontend-b/package.json"],
       "branchPrefix": "renovate/frontend-b/"
     }
