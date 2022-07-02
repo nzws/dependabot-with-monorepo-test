@@ -9,17 +9,30 @@
     {
       "matchBaseBranches": ["master"],
       "branchPrefix": "renovate/master/",
-      "ignorePaths": ["packages/**"]
+      "matchFiles": ["packages/**"],
+      "enabled": false
     },
     {
       "matchBaseBranches": ["develop/a"],
-      "branchPrefix": "renovate/frontend-a/",
-      "ignorePaths": ["packages/frontend-b/**"]
+      "matchFiles": ["packages/frontend-b/**"],
+      "enabled": false
     },
     {
       "matchBaseBranches": ["develop/b"],
-      "branchPrefix": "renovate/frontend-b/",
-      "ignorePaths": ["packages/frontend-a/**"]
+      "matchFiles": ["packages/frontend-a/**"],
+      "enabled": false
+    },
+    {
+      "matchBaseBranches": ["master"],
+      "branchPrefix": "renovate/master/"
+    },
+    {
+      "matchBaseBranches": ["develop/a"],
+      "branchPrefix": "renovate/frontend-a/"
+    },
+    {
+      "matchBaseBranches": ["develop/b"],
+      "branchPrefix": "renovate/frontend-b/"
     }
   ]
 }
