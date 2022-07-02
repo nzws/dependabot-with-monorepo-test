@@ -6,15 +6,18 @@
   "branchConcurrentLimit": 0,
   "packageRules": [
     {
-      "matchBaseBranches": ["master"],
+      "matchPackagePatterns": ["*"],
+      "baseBranches": ["master"],
       "matchFiles": ["package.json"]
     },
     {
-      "matchBaseBranches": ["develop/a"],
+      "matchPackagePatterns": ["*"],
+      "baseBranches": ["develop/a"],
       "matchFiles": ["packages/frontend-a/package.json"]
     },
     {
-      "matchBaseBranches": ["develop/b"],
+      "matchPackagePatterns": ["*"],
+      "baseBranches": ["develop/b"],
       "matchFiles": ["packages/frontend-b/package.json"]
     }
   ]
